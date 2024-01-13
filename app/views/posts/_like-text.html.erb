@@ -1,0 +1,27 @@
+<% likes = @post.likes.includes(:user) %>
+<% size = likes.size %>
+<span>
+  <% if size < 1 %>
+    <strong>0 likes</strong>
+  <% elsif size == 1 %>
+    <% user = likes[0].user %>
+    <% if user != current_user %>
+      <%= image_tag avatar_url(user), class: "avatar-image tiny" %>
+      Liked by
+      <strong><%= link_to user.name ,user_path(user), class: "post-username" %></strong>
+    <% else %>
+      <strong><%= size %> like</strong>
+    <% end %>
+  <% elsif likes.size > 1 %>
+    <% if likes[0].user != current_user %>
+      <% user = likes[0].user %>
+    <% elsif likes[1].user != current_user %>
+      <% user = likes[1].user %>
+    <% else %>
+      <strong><%= size %> likes</strong>
+    <% end %>
+    <%= image_tag avatar_url(user), class: "avatar-image tiny" %>
+    Liked by <strong><%= link_to user.name, user_path(user), class: "post-username" %></strong>
+    and <strong><%= (size -1) %></strong> others
+  <% end %>
+</span>

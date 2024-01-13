@@ -1,0 +1,253 @@
+.box {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 1px;
+  padding: 40px 40px 20px;
+  width: 350px;
+}
+
+.heading {
+  background-position: -98px 0;
+  height: 51px;
+  margin: 0 auto;
+  width: 175px;
+}
+
+.form {
+  margin-top: 12px;
+}
+
+.form-area {
+  background-color: transparent;
+  border: 1px solid var(--border-color-2);
+  border-radius: 3px;
+  height: 60px;
+  padding: 6px 10px;
+  resize: none;
+  width: 100%;
+}
+
+.form-input {
+  background-color: transparent;
+  border: 1px solid var(--border-color-2);
+  border-radius: 3px;
+  font-size: 1rem;
+  height: 2rem;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.form-row {
+  padding-bottom: 1rem;
+}
+
+.field {
+  margin-bottom: 6px;
+}
+
+.input {
+  background-color: #fafafa;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  color: var(--main-color);
+  font-size: 12px;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+
+  &:focus {
+    border: 1px solid #b2b2b2;
+    font-size: 12px;
+  }
+
+  &::placeholder {
+    font-size: 12px;
+  }
+}
+
+.button {
+  background-color: #0095f6;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 10px 0;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.info {
+  color: var(--font-color-2);
+  text-align: center;
+  a {
+    color: var(--font-color-2);
+    font-weight: 600;
+  }
+}
+
+.intro {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 10px 0 15px;
+}
+
+.tip {
+  font-size: 12px;
+}
+
+.separator {
+  margin: 4px 0 8px;
+  width: 100%;
+}
+
+.or {
+  color: #999;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.line {
+  background-color: #efefef;
+  height: 2px;
+  width: 105px;
+}
+
+.facebook-button {
+  background-color: transparent;
+  border: none;
+  color: #00376b;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.facebook-icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+.normal {
+  background-position: -246px -319px;
+}
+
+.light {
+  background-position: -264px -319px;
+}
+
+.forgot {
+  margin-top: 20px;
+  a {
+    color: #00376b;
+    font-size: 12px;
+  }
+}
+
+.signup, .login {
+  margin: 10px 0 20px;
+  padding: 25px 40px;
+}
+
+.link {
+  color: #0095f6;
+  font-weight: 600;
+}
+
+.apps {
+  width: 350px;
+}
+
+.store-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.store {
+  height: 41px;
+  width: 130px;
+}
+
+.apple {
+  background-position: 0 -181px;
+}
+
+.google {
+  background-position: -98px -53px;
+}
+
+.password-form {
+  padding: 24px 44px 0;
+  position: relative;
+  width: 388px;
+  text-align: center;
+  .info {
+    margin-bottom: 1rem;
+  }
+  a {
+    color: var(--font-color);
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    &:hover {
+      color: var(--font-color);
+    }
+  }
+}
+
+.lock {
+  background-position: 0 0;
+  height: 96px;
+  margin: 0 auto 1rem;
+  width: 96px;
+}
+
+.trouble {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.input-email {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: #fafafa;
+  font-size: 14px;
+  line-height: 30px;
+  outline: none;
+  margin-bottom: 8px;
+  padding: 4px 9px;
+  width: 100%;
+  &:focus {
+    border: 1px solid var(--font-color-2);
+  }
+}
+
+.file-field-tag {
+  display: none;
+}
+
+.back-to {
+  position: relative;
+  margin-top: 52px;
+  left: -45px;
+  width: 388px;
+}
+
+.return-back-link {
+  background-color: #fafafa;
+  border: 1px solid var(--border-color);
+  padding: 12px 0;
+  width: 100%;
+}

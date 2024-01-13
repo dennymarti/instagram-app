@@ -1,0 +1,39 @@
+<%= render 'shared/header' %>
+
+<div class="container">
+  <div class="wrapper d-flex align-items-center justify-content-center">
+    <div>
+      <div class="box password-form">
+        <div class="sprite lock"></div>
+        <h4 class="trouble">Trouble Loggin In?</h4>
+        <p class="info">Enter your email, phone, or username and we'll send you a link to get back into your account.</p>
+
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |form| %>
+          <%= form.text_field :email, autocomplete: false, class: "input-email", placeholder: "Email, Phone, or Username" %>
+          <%= form.submit "Send Login link", class: "button" %>
+        <% end %>
+
+        <div class="separator d-flex align-items-center justify-content-between">
+          <div class="line"></div>
+          <p class="or">OR</p>
+          <div class="line"></div>
+        </div>
+
+        <% if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Create New Account", new_registration_path(resource_name) %>
+        <% end %>
+
+        <div class="back-to">
+          <% if controller_name != 'sessions' %>
+            <%= link_to "Back To Login", new_session_path(resource_name), class: "return-back-link" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- alerts -->
+  <div>
+    <%= render 'shared/devisemes' %>
+  </div>
+</div>

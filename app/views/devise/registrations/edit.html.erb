@@ -1,0 +1,147 @@
+<%= render "shared/header" %>
+
+<div class="container">
+  <div class="row edit-profile-wrapper">
+    <div class="column left col-sm-3">
+      <%= render "shared/profile-navlist" %>
+    </div>
+
+    <div class="column right col-sm-9">
+      <div class="row column-header">
+        <div class="col-sm-3">
+          <%= image_tag avatar_url(@user), class: "avatar-image medium" %>
+        </div>
+
+        <div class="col-sm-9 flex-md-row">
+          <h1 class="column-title"><%= @user.name %></h1>
+
+          <a class="link" href="#">Change Profile Photo</a>
+        </div>
+      </div>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form" }) do |form| %>
+        <div class="row form-row">
+          <div class="col-sm-3">
+            <%= form.label :name, class: "form-label" %>
+          </div>
+
+          <div class="col-sm-9">
+            <%= form.text_field :name, class: "form-input" %>
+
+            <div class="row description">
+              <p>
+                Help people discover your account by using the name you're known by:
+                either your full name, nickname, or business name.
+              </p>
+              <p>
+                You can only change your name twice within 14 days.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-sm-3">
+            <%= form.label :website, class: "form-label" %>
+          </div>
+
+          <div class="col-sm-9">
+            <%= form.text_field :website, class: "form-input" %>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-sm-3">
+            <%= form.label :bio, class: "form-label" %>
+          </div>
+
+          <div class="col-sm-9">
+            <%= form.text_area :bio, class: "form-area" %>
+
+            <div class="description">
+              <h2>Personal Information</h2>
+              <p>
+                Provide your personal information,
+                even if the account is used for a business, a pet or something else.
+                This won't be a part of your public profile.
+              </p>
+            </div>
+          </div>
+        </div>
+
+<!--
+        <div class="row form-row">
+          <div class="col-sm-3">
+            <%= form.label :email, class: "form-label" %>
+          </div>
+
+          <div class="col-sm-9">
+            <%= form.text_field :email, class: "form-input" %>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-sm-3">
+            <%= form.label :phone, class: "form-label" %>
+          </div>
+
+          <div class="col-sm-9">
+            <%= form.text_field :phone, class: "form-input" %>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-sm-3">
+            <%= form.label :gender, class: "form-label" %>
+          </div>
+
+          <div class="col-sm-9">
+            <%= form.text_field :gender, class: "form-input" %>
+          </div>
+        </div>
+        -->
+        <div class="row form-row">
+          <div class="col-sm-3">
+            <%= form.label :current_password, autocomplete: "off", class: "form-label" %>
+          </div>
+
+          <div class="col-sm-9">
+            <%= form.password_field :current_password, autocomplete: "off", class: "form-input" %>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-sm-3">
+            <%= form.label :password, class: "form-label" %>
+          </div>
+
+          <div class="col-sm-9">
+            <%= form.password_field :password, autocomplete: "off", class: "form-input", placeholder: "Leave blank if you don't want to change it" %>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-sm-3">
+            <%= form.label :password_confirmation, class: "form-label" %>
+          </div>
+
+          <div class="col-sm-9">
+            <%= form.password_field :password_confirmation, autocomplete: "off", class: "form-input", placeholder: "Leave blank if you don't want to change it" %>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-sm-3">
+          </div>
+          <div class="col-sm-9">
+            <%= form.submit "Submit", class: "submit" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div>
+    <%= render "shared/devisemes" %>
+  </div>
+</div>

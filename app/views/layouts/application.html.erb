@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instagram</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= favicon_link_tag "icon.png" %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <!-- flash -->
+  <% if flash.any? %>
+    <script type="text/javascript">
+        <% flash.each do |key, message| %>
+        <% type = key.to_s.gsub('alert', 'error').gsub('notice', 'success') %>
+        toastr.<%= type %>("<%= message %>")
+        <% end %>
+    </script>
+  <% end %>
+
+  <!-- content -->
+  <%= yield %>
+
+  <!-- footer -->
+  <%= render 'shared/footer' %>
+  </body>
+</html>
